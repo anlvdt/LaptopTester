@@ -23,7 +23,7 @@ Những thủ thuật này không quá phức tạp -- chỉ cần sửa vài gi
 
 Đó là lý do mình bắt đầu viết LaptopTester. Ban đầu chỉ là vài dòng PowerShell để so sánh thông số giữa WMI, Registry và SMBIOS. Dần dần mình thêm kiểm tra pin, bàn phím, màn hình, USB... vì mỗi lần mua máy đều cần kiểm tra nhiều thứ mà không có công cụ nào làm hết trong một lần.
 
-Sau 3 năm, phiên bản v3.3 được viết lại hoàn toàn bằng C# / WPF, giao diện tối Spotify-style, chạy trực tiếp từ USB mà không cần cài đặt.
+Sau hơn 1 tháng phát triển (từ tháng 1/2026), phiên bản v3.3 được viết lại hoàn toàn bằng C# / WPF, giao diện tối Spotify-style, chạy trực tiếp từ USB mà không cần cài đặt.
 
 Phần mềm vẫn còn nhiều điểm cần cải thiện. Mình chia sẻ ở đây cho những ai cùng làm nghề và gặp vấn đề tương tự.
 
@@ -37,7 +37,7 @@ These tricks aren't overly sophisticated -- just editing a few Registry values a
 
 That's why I started writing LaptopTester. It began as a few PowerShell lines to cross-check specs between WMI, Registry and SMBIOS. Over time, I added battery testing, keyboard checks, display tests, USB verification... because every time I bought a used machine, I needed to check many things and no single tool did it all.
 
-After 3 years, version 3.3 was fully rewritten in C# / WPF, with a dark Spotify-style interface, running directly from USB with no installation.
+After over a month of development (starting January 2026), version 3.3 was fully rewritten in C# / WPF, with a dark Spotify-style interface, running directly from USB with no installation.
 
 The software still has room for improvement. I share it here for anyone in the same line of work who faces similar problems.
 
