@@ -25,6 +25,8 @@ Những thủ thuật này không quá phức tạp -- chỉ cần sửa vài gi
 
 Sau khoảng 5 tháng phát triển, phiên bản v3.3 được viết lại hoàn toàn bằng C# / WPF, giao diện tối Spotify-style, chạy trực tiếp từ USB mà không cần cài đặt.
 
+Tính năng mình tâm đắc nhất là Quick Test -- quy trình kiểm tra 10 bước có hướng dẫn từng bước: phần cứng, ổ cứng, pin, màn hình, bàn phím, touchpad, loa, micro, camera. Mỗi bước được chấm điểm, cuối cùng ra tổng điểm /100 và đánh giá "Máy tốt", "Cần cân nhắc" hoặc "Không nên mua". Mình viết tính năng này vì khi kiểm tra máy cho khách, cần một quy trình nhanh, không bỏ sót bước nào, và có kết quả rõ ràng để khách hiểu ngay.
+
 Phần mềm vẫn còn nhiều điểm cần cải thiện. Mình chia sẻ ở đây cho những ai cùng làm nghề và gặp vấn đề tương tự.
 
 **EN**
@@ -38,6 +40,8 @@ These tricks aren't overly sophisticated -- just editing a few Registry values a
 That's why I started writing LaptopTester. It began as a Python console app in October 2025, cross-checking specs between WMI, Registry and SMBIOS. Over time, I added battery testing, keyboard checks, display tests, USB verification... because every time I bought a used machine, I needed to check many things and no single tool did it all.
 
 After about 5 months of development, version 3.3 was fully rewritten in C# / WPF, with a dark Spotify-style interface, running directly from USB with no installation.
+
+The feature I'm most proud of is Quick Test -- a guided 10-step diagnostic: hardware, storage, battery, display, keyboard, touchpad, speaker, mic, camera. Each step is scored, ending with a total out of 100 and a clear verdict: "Good machine", "Consider carefully" or "Don't buy". I built this because when checking machines for customers, I needed a quick process that doesn't skip any step, with results clear enough for anyone to understand.
 
 The software still has room for improvement. I share it here for anyone in the same line of work who faces similar problems.
 
