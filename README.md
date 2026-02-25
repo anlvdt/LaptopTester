@@ -17,9 +17,9 @@
 
 Mình là Lê Văn Ẩn, làm nghề mua bán laptop cũ ở Việt Nam.
 
-Một ngày, mình mua một chiếc ThinkPad được quảng cáo i7 / 16GB RAM / 512GB SSD với giá khá hợp lý. Mở máy lên, Windows hiện đúng thông số đó. CPU-Z cũng hiện đúng. Nhưng khi dùng thực tế, máy chậm bất thường. Kiểm tra kỹ hơn bằng cách đọc trực tiếp từ SMBIOS và Registry, mình phát hiện: CPU thật là i3, RAM chỉ có 4GB, và ổ cứng là HDD 128GB được mount thêm partition ảo.
+Một ngày, mình mua một chiếc máy được quảng cáo i7 / 16GB RAM / 512GB SSD với giá hợp lý. Mở máy lên, chuột phải My Computer hiện đúng 16GB RAM. Task Manager cũng hiện đúng. Dxdiag hiện i7. Nhưng khi dùng thực tế, máy chậm bất thường. Kiểm tra kỹ hơn, mình phát hiện: RAM thật chỉ có 8GB (thông số hiển thị trong System Properties đã bị sửa qua Registry), và ổ cứng là HDD 500GB được đặt tên giống SSD trong Disk Management.
 
-Tất cả các phần mềm thông thường như CPU-Z, HWiNFO đều bị đánh lừa vì chúng chỉ đọc thông số từ một nguồn duy nhất -- thường là WMI -- và WMI thì có thể bị sửa bằng phần mềm giả mạo.
+Những thủ thuật này không quá phức tạp -- chỉ cần sửa vài giá trị Registry và dùng phần mềm thay đổi thông số hiển thị trong WMI. Người mua bình thường mở máy lên, xem Properties, thấy đúng thông số là tin. Ngay cả một số kỹ thuật viên cũng bị qua mặt nếu chỉ kiểm tra bằng một nguồn duy nhất.
 
 Đó là lý do mình bắt đầu viết LaptopTester. Ban đầu chỉ là vài dòng PowerShell để so sánh thông số giữa WMI, Registry và SMBIOS. Dần dần mình thêm kiểm tra pin, bàn phím, màn hình, USB... vì mỗi lần mua máy đều cần kiểm tra nhiều thứ mà không có công cụ nào làm hết trong một lần.
 
@@ -31,9 +31,9 @@ Phần mềm vẫn còn nhiều điểm cần cải thiện. Mình chia sẻ ở
 
 I'm Le Van An, a used laptop dealer in Vietnam.
 
-One day, I bought a ThinkPad advertised as i7 / 16GB RAM / 512GB SSD at a fair price. Windows showed those exact specs. CPU-Z confirmed them too. But in actual use, the machine was unusually slow. After digging deeper by reading directly from SMBIOS and the Registry, I found the truth: the real CPU was an i3, RAM was only 4GB, and the storage was a 128GB HDD with a virtual partition to fake the capacity.
+One day, I bought a machine advertised as i7 / 16GB RAM / 512GB SSD at a fair price. Right-clicking My Computer showed 16GB RAM. Task Manager confirmed it. Dxdiag showed i7. But in actual use, the machine was unusually slow. After digging deeper, I found the truth: the actual RAM was only 8GB (the display value in System Properties had been modified via Registry), and the storage was a 500GB HDD renamed to look like an SSD in Disk Management.
 
-All common tools like CPU-Z and HWiNFO were fooled because they only read specs from a single source -- typically WMI -- which can be modified by spoofing software.
+These tricks aren't overly sophisticated -- just editing a few Registry values and using software to alter WMI display data. Regular buyers open the machine, check Properties, see matching specs and trust it. Even some technicians get fooled if they only check one source.
 
 That's why I started writing LaptopTester. It began as a few PowerShell lines to cross-check specs between WMI, Registry and SMBIOS. Over time, I added battery testing, keyboard checks, display tests, USB verification... because every time I bought a used machine, I needed to check many things and no single tool did it all.
 
@@ -53,9 +53,9 @@ This is the core feature. Instead of reading from one source, LaptopTester queri
 
 | Nguồn / Source | Mô tả / Description |
 |------|------|
-| WMI (Windows Management Instrumentation) | Nguồn mà hầu hết phần mềm dùng. Dễ bị sửa bởi phần mềm giả mạo. / The source most tools use. Easily modified by spoofing software. |
-| Registry | Thông số lưu trong Windows Registry. Khó sửa hơn nhưng vẫn có thể. / Specs stored in Windows Registry. Harder to modify but still possible. |
-| SMBIOS / BIOS | Thông số ghi trực tiếp trên firmware phần cứng. Rất khó giả mạo. / Specs written directly on hardware firmware. Very hard to fake. |
+| WMI (Windows Management Instrumentation) | Nguồn mà System Properties, Task Manager, Dxdiag dùng. Có thể bị sửa bằng phần mềm. / Used by System Properties, Task Manager, Dxdiag. Can be modified by software. |
+| Registry | Thông số lưu trong Windows Registry. Một số phần mềm fake sửa ở đây để thay đổi hiển thị. / Specs stored in Windows Registry. Some faking software modifies values here. |
+| SMBIOS / BIOS | Thông số ghi trực tiếp trên firmware phần cứng. Rất khó giả mạo vì nằm ở tầng thấp hơn OS. / Specs written directly on hardware firmware. Very hard to fake as it's below OS level. |
 
 Nếu có bất kỳ sai lệch nào giữa 3 nguồn, phần mềm sẽ cảnh báo ngay. | If there's any discrepancy between the 3 sources, the software warns immediately.
 
@@ -154,13 +154,13 @@ Phát hiện tất cả cổng USB trên máy, hiển thị: | Detects all USB p
 
 | | Free | Pro (149K VND) |
 |---|---|---|
-| Quét phần cứng / Hardware scan | Co / Yes | Co / Yes |
-| Kiểm tra thiết bị / Device testing | Co / Yes | Co / Yes |
-| Pin, nhiệt độ / Battery, temperature | Co / Yes | Co / Yes |
-| Chống fake đa nguồn / Multi-source anti-fake | -- | Co / Yes |
-| Benchmark CPU/GPU | -- | Co / Yes |
-| AI tư vấn / AI advisor | -- | Co / Yes |
-| Xuất báo cáo PDF / PDF report export | -- | Co / Yes |
+| Quét phần cứng / Hardware scan | Có / Yes | Có / Yes |
+| Kiểm tra thiết bị / Device testing | Có / Yes | Có / Yes |
+| Pin, nhiệt độ / Battery, temperature | Có / Yes | Có / Yes |
+| Chống fake đa nguồn / Multi-source anti-fake | -- | Có / Yes |
+| Benchmark CPU/GPU | -- | Có / Yes |
+| AI tư vấn / AI advisor | -- | Có / Yes |
+| Xuất báo cáo PDF / PDF report export | -- | Có / Yes |
 
 Trả một lần, dùng trọn đời. | One-time payment, lifetime use.
 
