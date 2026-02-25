@@ -11,39 +11,45 @@
 
 ---
 
-## Gioi thieu
+## Giới thiệu | Introduction
 
-LaptopTester la mot phan mem kiem tra laptop cu, giup nguoi mua va ky thuat vien kiem tra nhanh tinh trang phan cung truoc khi quyet dinh.
+**VI** -- LaptopTester là phần mềm kiểm tra laptop cũ, giúp người mua và kỹ thuật viên kiểm tra nhanh tình trạng phần cứng trước khi quyết định.
 
-Minh la Le Van An, lam nghe mua ban laptop cu. Trong qua trinh lam viec, minh thuong gap tinh trang may bi sua thong so (fake RAM, doi ten CPU...) ma khong de phat hien bang cac cong cu thong thuong. Nen minh viet phan mem nay de phuc vu cong viec cua minh, va chia se cho nhung ai can.
+Mình là Lê Văn Ẩn, làm nghề mua bán laptop cũ. Trong quá trình làm việc, mình thường gặp tình trạng máy bị sửa thông số (fake RAM, đổi tên CPU...) mà không dễ phát hiện bằng các công cụ thông thường. Nên mình viết phần mềm này để phục vụ công việc của mình, và chia sẻ cho những ai cần.
 
-Phan mem con nhieu han che, minh se co gang cai thien dan theo thoi gian.
+Phần mềm còn nhiều hạn chế, mình sẽ cố gắng cải thiện dần theo thời gian.
+
+**EN** -- LaptopTester is a diagnostic tool for used laptops, helping buyers and technicians quickly check hardware condition before making a decision.
+
+I'm Le Van An, a used laptop dealer in Vietnam. During my work, I often encountered machines with modified specs (faked RAM, renamed CPU...) that aren't easy to detect with common tools. So I wrote this software for my own use, and share it for anyone who finds it useful.
+
+The software still has many limitations, and I'll try to improve it over time.
 
 ---
 
-## Tinh nang chinh
+## Tính năng chính | Main Features
 
-**Kiem tra phan cung**
-- Doc thong tin CPU, RAM, GPU, o cung, pin
-- So sanh thong so tu nhieu nguon (WMI, Registry, SMBIOS) de phat hien sai lech
+### Kiểm tra phần cứng | Hardware Inspection
+- Đọc thông tin CPU, RAM, GPU, ổ cứng, pin | Read CPU, RAM, GPU, storage, battery info
+- So sánh thông số từ nhiều nguồn (WMI, Registry, SMBIOS) để phát hiện sai lệch | Cross-check specs from multiple sources to detect discrepancies
 
-**Kiem tra thiet bi ngoai vi**
-- Ban phim, touchpad, loa, micro, camera
-- Cong USB (phat hien loai cong, toc do, power delivery)
+### Kiểm tra thiết bị ngoại vi | Peripheral Testing
+- Bàn phím, touchpad, loa, micro, camera | Keyboard, touchpad, speaker, mic, camera
+- Cổng USB (phát hiện loại cổng, tốc độ, power delivery) | USB ports (type, speed, power delivery detection)
 - WiFi, Bluetooth
 
-**Pin**
-- Suc khoe pin, chu ky sac, dung luong goc vs hien tai
-- Chay stress test voi workload thuc te
+### Pin | Battery
+- Sức khỏe pin, chu kỳ sạc, dung lượng gốc vs hiện tại | Battery health, charge cycles, original vs current capacity
+- Stress test với workload thực tế | Stress test with real workloads
 
-**Khac**
-- Kiem tra nhiet do CPU/GPU
-- Xuat bao cao
-- Giao dien tieng Viet va tieng Anh
+### Khác | Others
+- Kiểm tra nhiệt độ CPU/GPU | CPU/GPU temperature monitoring
+- Xuất báo cáo | Report export
+- Giao diện tiếng Việt và tiếng Anh | Vietnamese and English interface
 
 ---
 
-## Screenshots
+## Ảnh chụp màn hình | Screenshots
 
 <p align="center">
   <img src="screenshots/dashboard.png" alt="Dashboard" width="45%">
@@ -60,37 +66,40 @@ Phan mem con nhieu han che, minh se co gang cai thien dan theo thoi gian.
 
 ---
 
-## Tai ve
+## Tải về | Download
 
-**[Tai LaptopTester v3.3](https://github.com/anlvdt/LaptopTester/releases/latest)**
+**[Tải LaptopTester v3.3 | Download LaptopTester v3.3](https://github.com/anlvdt/LaptopTester/releases/latest)**
 
-- File .exe duy nhat, da tich hop runtime, khong can cai dat
-- Chay duoc truc tiep tu USB
-- Yeu cau: Windows 10/11 (64-bit), quyen Administrator
-
----
-
-## Phien ban
-
-| Version | Ghi chu |
-|---------|---------|
-| v3.3 | Phien ban hien tai. Viet lai bang C# / WPF / .NET 8 |
-| v2.x | Phien ban cu (PowerShell), khong con phat trien |
+- File .exe duy nhất, đã tích hợp runtime, không cần cài đặt | Single .exe file, runtime included, no installation needed
+- Chạy được trực tiếp từ USB | Runs directly from USB
+- Yêu cầu: Windows 10/11 (64-bit), quyền Administrator | Requires: Windows 10/11 (64-bit), Administrator privileges
 
 ---
 
-## Mien phi va tra phi
+## Phiên bản | Versions
 
-Phan mem co 2 phien ban:
-
-- **Free**: Kiem tra phan cung co ban, man hinh, ban phim, loa, USB, WiFi...
-- **Pro (149K, tra mot lan)**: Them AI tu van, chong fake da nguon, benchmark, xuat bao cao PDF
-
-Chi tiet xem tai [laptoptester.web.app](https://laptoptester.web.app).
+| Version | Ghi chú | Notes |
+|---------|---------|-------|
+| v3.3 | Phiên bản hiện tại. Viết lại bằng C# / WPF / .NET 8 | Current version. Rewritten in C# / WPF / .NET 8 |
+| v2.x | Phiên bản cũ (PowerShell), không còn phát triển | Legacy version (PowerShell), no longer maintained |
 
 ---
 
-## Lien he
+## Miễn phí và trả phí | Free and Paid
+
+**VI** -- Phần mềm có 2 phiên bản:
+- **Free**: Kiểm tra phần cứng cơ bản, màn hình, bàn phím, loa, USB, WiFi...
+- **Pro (149K, trả một lần)**: Thêm AI tư vấn, chống fake đa nguồn, benchmark, xuất báo cáo PDF
+
+**EN** -- The software has 2 versions:
+- **Free**: Basic hardware checks, display, keyboard, speaker, USB, WiFi...
+- **Pro (149K VND, one-time payment)**: Adds AI advisor, multi-source anti-fake, benchmark, PDF report export
+
+Chi tiết | Details: [laptoptester.web.app](https://laptoptester.web.app)
+
+---
+
+## Liên hệ | Contact
 
 - Facebook: [fb.com/anlvdt](https://www.facebook.com/anlvdt)
 - Zalo: 0976896621
@@ -98,5 +107,5 @@ Chi tiet xem tai [laptoptester.web.app](https://laptoptester.web.app).
 ---
 
 <p align="center">
-  <i>(c) 2026 Le Van An</i>
+  <i>(c) 2026 Lê Văn Ẩn | Le Van An</i>
 </p>
