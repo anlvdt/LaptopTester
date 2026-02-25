@@ -21,9 +21,9 @@ Một ngày, mình mua một chiếc máy được quảng cáo i7 / 16GB RAM / 
 
 Những thủ thuật này không quá phức tạp -- chỉ cần sửa vài giá trị Registry và dùng phần mềm thay đổi thông số hiển thị trong WMI. Người mua bình thường mở máy lên, xem Properties, thấy đúng thông số là tin. Ngay cả một số kỹ thuật viên cũng bị qua mặt nếu chỉ kiểm tra bằng một nguồn duy nhất.
 
-Đó là lý do mình bắt đầu viết LaptopTester. Ban đầu chỉ là vài dòng PowerShell để so sánh thông số giữa WMI, Registry và SMBIOS. Dần dần mình thêm kiểm tra pin, bàn phím, màn hình, USB... vì mỗi lần mua máy đều cần kiểm tra nhiều thứ mà không có công cụ nào làm hết trong một lần.
+Đó là lý do mình bắt đầu viết LaptopTester. Ban đầu là bản Python vào tháng 10/2025, chạy trên console để so sánh thông số giữa WMI, Registry và SMBIOS. Dần dần mình thêm kiểm tra pin, bàn phím, màn hình, USB... vì mỗi lần mua máy đều cần kiểm tra nhiều thứ mà không có công cụ nào làm hết trong một lần.
 
-Sau hơn 1 tháng phát triển (từ tháng 1/2026), phiên bản v3.3 được viết lại hoàn toàn bằng C# / WPF, giao diện tối Spotify-style, chạy trực tiếp từ USB mà không cần cài đặt.
+Sau khoảng 5 tháng phát triển, phiên bản v3.3 được viết lại hoàn toàn bằng C# / WPF, giao diện tối Spotify-style, chạy trực tiếp từ USB mà không cần cài đặt.
 
 Phần mềm vẫn còn nhiều điểm cần cải thiện. Mình chia sẻ ở đây cho những ai cùng làm nghề và gặp vấn đề tương tự.
 
@@ -35,9 +35,9 @@ One day, I bought a machine advertised as i7 / 16GB RAM / 512GB SSD at a fair pr
 
 These tricks aren't overly sophisticated -- just editing a few Registry values and using software to alter WMI display data. Regular buyers open the machine, check Properties, see matching specs and trust it. Even some technicians get fooled if they only check one source.
 
-That's why I started writing LaptopTester. It began as a few PowerShell lines to cross-check specs between WMI, Registry and SMBIOS. Over time, I added battery testing, keyboard checks, display tests, USB verification... because every time I bought a used machine, I needed to check many things and no single tool did it all.
+That's why I started writing LaptopTester. It began as a Python console app in October 2025, cross-checking specs between WMI, Registry and SMBIOS. Over time, I added battery testing, keyboard checks, display tests, USB verification... because every time I bought a used machine, I needed to check many things and no single tool did it all.
 
-After over a month of development (starting January 2026), version 3.3 was fully rewritten in C# / WPF, with a dark Spotify-style interface, running directly from USB with no installation.
+After about 5 months of development, version 3.3 was fully rewritten in C# / WPF, with a dark Spotify-style interface, running directly from USB with no installation.
 
 The software still has room for improvement. I share it here for anyone in the same line of work who faces similar problems.
 
@@ -146,7 +146,7 @@ Phát hiện tất cả cổng USB trên máy, hiển thị: | Detects all USB p
 | Version | Ghi chú / Notes |
 |---------|---------|
 | v3.3 | Viết lại hoàn toàn bằng C# / WPF / .NET 8. Giao diện tối, AI advisor, song ngữ. / Fully rewritten in C# / WPF / .NET 8. Dark theme, AI advisor, bilingual. |
-| v2.x | PowerShell. Không còn phát triển. / PowerShell. No longer maintained. |
+| v2.x | Python. Phiên bản đầu tiên (10/2025), không còn phát triển. / Python. Original version (10/2025), no longer maintained. |
 
 ---
 
