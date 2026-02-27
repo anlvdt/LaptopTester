@@ -2,11 +2,11 @@
   <img src="screenshots/dashboard.png" alt="LaptopTester v3.3" width="800">
 </p>
 
-<h1 align="center">LaptopTester v3.3.2</h1>
+<h1 align="center">LaptopTester v3.3.3</h1>
 
 <p align="center">
   <a href="https://laptoptester.web.app"><img src="https://img.shields.io/badge/Website-laptoptester.web.app-22c55e?style=for-the-badge" alt="Website"></a>
-  <a href="https://github.com/anlvdt/LaptopTester/releases/latest"><img src="https://img.shields.io/badge/Download-v3.3.2-blue?style=for-the-badge" alt="Download"></a>
+  <a href="https://github.com/anlvdt/LaptopTester/releases/latest"><img src="https://img.shields.io/badge/Download-v3.3.3-blue?style=for-the-badge" alt="Download"></a>
 </p>
 
 ---
@@ -102,7 +102,7 @@ Phát hiện loại cổng (USB 2.0/3.0/3.1/USB-C/Thunderbolt 4), tốc độ, v
 
 ## Tải về
 
-**[Tải LaptopTester v3.3.2](https://github.com/anlvdt/LaptopTester/releases/latest)** -- File .exe (~271 MB), tích hợp runtime, không cần cài đặt, chạy từ USB.
+**[Tải LaptopTester v3.3.3](https://github.com/anlvdt/LaptopTester/releases/latest)** -- File .exe (~271 MB), tích hợp runtime, không cần cài đặt, chạy từ USB.
 
 Yêu cầu: Windows 10/11 (64-bit), quyền Administrator.
 
@@ -121,7 +121,8 @@ Chi tiết: [laptoptester.web.app](https://laptoptester.web.app)
 
 | Version | Ghi chú |
 |---------|---------|
-| v3.3.2 | Patch: fix Settings layout, Shopee Affiliate, license path portable. |
+| v3.3.3 | Patch: fix Settings layout, Shopee Affiliate, license path portable. |
+| v3.3.2 | Patch: fix tất cả nút mở URL không hoạt động khi chạy Administrator. |
 | v3.3.1 | Patch: fix app chạy background không hiện UI. |
 | v3.3 | C# / WPF / .NET 8. Giao diện tối, AI advisor, song ngữ. |
 | v2.x | Python (10/2025). Không còn phát triển. |
@@ -153,7 +154,7 @@ The software still has room for improvement. I share it for anyone who finds it 
 
 ### Download
 
-**[Download LaptopTester v3.3.2](https://github.com/anlvdt/LaptopTester/releases/latest)** -- Single .exe (~271 MB), runtime included, no installation, runs from USB.
+**[Download LaptopTester v3.3.3](https://github.com/anlvdt/LaptopTester/releases/latest)** -- Single .exe (~271 MB), runtime included, no installation, runs from USB.
 
 Requires: Windows 10/11 (64-bit), Administrator privileges.
 
