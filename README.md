@@ -171,6 +171,21 @@ Details: [laptoptester.web.app](https://laptoptester.web.app)
 
 ---
 
+## Ủng hộ | Support
+
+<p align="center">
+  <a href="https://collshp.com/laptopleandotcom?view=storefront"><img src="https://img.shields.io/badge/Shopee-Gian_hang_Laptop_Le_An-ee4d2d?style=for-the-badge&logo=shopee&logoColor=white" alt="Shopee"></a>
+  <a href="https://me.momo.vn/0976896621"><img src="https://img.shields.io/badge/MoMo-0976896621-a50064?style=for-the-badge" alt="MoMo"></a>
+  <img src="https://img.shields.io/badge/MB_Bank-0360126996868_--_LE_VAN_AN-1e3a5f?style=for-the-badge" alt="MB Bank">
+</p>
+
+<p align="center">
+  <i>Nếu LaptopTester hữu ích, bạn có thể ủng hộ mình qua Shopee, MoMo hoặc chuyển khoản.</i><br>
+  <i>If LaptopTester is useful to you, consider supporting via Shopee, MoMo, or bank transfer.</i>
+</p>
+
+---
+
 <p align="center">
   <i>(c) 2026 Le Van An</i>
 </p>
